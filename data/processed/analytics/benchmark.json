@@ -1,0 +1,18 @@
+{
+  "pandas": {
+    "seconds": 55.5,
+    "peak_rss_mb": 351,
+    "products_found": 825869,
+    "mean_of_means": 3.871925
+  },
+  "duckdb": {
+    "seconds": 5.6,
+    "peak_rss_mb": 491,
+    "products_found": 825869,
+    "mean_of_means": 3.871925
+  },
+  "speedup_x": 9.91,
+  "task": "per-product review count + mean rating over 2,500,939 raw reviews (gzipped JSONL, 292 MB)",
+  "baseline": "pandas.read_json(lines=True, chunksize=50k) + incremental groupby",
+  "optimised": "DuckDB vectorised streaming scan with projection push-down (only 2 of 10 JSON fields parsed)"
+}

@@ -1,0 +1,970 @@
+{
+  "volume_by_year": [
+    {
+      "year": 2003,
+      "reviews": 1
+    },
+    {
+      "year": 2005,
+      "reviews": 8
+    },
+    {
+      "year": 2006,
+      "reviews": 17
+    },
+    {
+      "year": 2007,
+      "reviews": 77
+    },
+    {
+      "year": 2008,
+      "reviews": 215
+    },
+    {
+      "year": 2009,
+      "reviews": 218
+    },
+    {
+      "year": 2010,
+      "reviews": 283
+    },
+    {
+      "year": 2011,
+      "reviews": 740
+    },
+    {
+      "year": 2012,
+      "reviews": 2821
+    },
+    {
+      "year": 2013,
+      "reviews": 11176
+    },
+    {
+      "year": 2014,
+      "reviews": 31234
+    },
+    {
+      "year": 2015,
+      "reviews": 66398
+    },
+    {
+      "year": 2016,
+      "reviews": 137258
+    },
+    {
+      "year": 2017,
+      "reviews": 153668
+    },
+    {
+      "year": 2018,
+      "reviews": 123013
+    },
+    {
+      "year": 2019,
+      "reviews": 106838
+    },
+    {
+      "year": 2020,
+      "reviews": 75618
+    },
+    {
+      "year": 2021,
+      "reviews": 65681
+    },
+    {
+      "year": 2022,
+      "reviews": 47284
+    },
+    {
+      "year": 2023,
+      "reviews": 15599
+    }
+  ],
+  "category_by_year": [
+    {
+      "year": 2012,
+      "article_type": "Bags & Wallets",
+      "reviews": 112
+    },
+    {
+      "year": 2012,
+      "article_type": "Dresses",
+      "reviews": 21
+    },
+    {
+      "year": 2012,
+      "article_type": "Jewellery",
+      "reviews": 1121
+    },
+    {
+      "year": 2012,
+      "article_type": "Other",
+      "reviews": 651
+    },
+    {
+      "year": 2012,
+      "article_type": "Pants & Leggings",
+      "reviews": 15
+    },
+    {
+      "year": 2012,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 132
+    },
+    {
+      "year": 2012,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 71
+    },
+    {
+      "year": 2012,
+      "article_type": "Watches",
+      "reviews": 176
+    },
+    {
+      "year": 2013,
+      "article_type": "Bags & Wallets",
+      "reviews": 567
+    },
+    {
+      "year": 2013,
+      "article_type": "Dresses",
+      "reviews": 83
+    },
+    {
+      "year": 2013,
+      "article_type": "Jewellery",
+      "reviews": 4155
+    },
+    {
+      "year": 2013,
+      "article_type": "Other",
+      "reviews": 1992
+    },
+    {
+      "year": 2013,
+      "article_type": "Pants & Leggings",
+      "reviews": 126
+    },
+    {
+      "year": 2013,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 781
+    },
+    {
+      "year": 2013,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 318
+    },
+    {
+      "year": 2013,
+      "article_type": "Watches",
+      "reviews": 598
+    },
+    {
+      "year": 2014,
+      "article_type": "Bags & Wallets",
+      "reviews": 1931
+    },
+    {
+      "year": 2014,
+      "article_type": "Dresses",
+      "reviews": 403
+    },
+    {
+      "year": 2014,
+      "article_type": "Jewellery",
+      "reviews": 12094
+    },
+    {
+      "year": 2014,
+      "article_type": "Other",
+      "reviews": 4121
+    },
+    {
+      "year": 2014,
+      "article_type": "Pants & Leggings",
+      "reviews": 507
+    },
+    {
+      "year": 2014,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 1826
+    },
+    {
+      "year": 2014,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 1381
+    },
+    {
+      "year": 2014,
+      "article_type": "Watches",
+      "reviews": 1397
+    },
+    {
+      "year": 2015,
+      "article_type": "Bags & Wallets",
+      "reviews": 4151
+    },
+    {
+      "year": 2015,
+      "article_type": "Dresses",
+      "reviews": 1131
+    },
+    {
+      "year": 2015,
+      "article_type": "Jewellery",
+      "reviews": 24231
+    },
+    {
+      "year": 2015,
+      "article_type": "Other",
+      "reviews": 7017
+    },
+    {
+      "year": 2015,
+      "article_type": "Pants & Leggings",
+      "reviews": 1902
+    },
+    {
+      "year": 2015,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 4346
+    },
+    {
+      "year": 2015,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 2572
+    },
+    {
+      "year": 2015,
+      "article_type": "Watches",
+      "reviews": 2926
+    },
+    {
+      "year": 2016,
+      "article_type": "Bags & Wallets",
+      "reviews": 9093
+    },
+    {
+      "year": 2016,
+      "article_type": "Dresses",
+      "reviews": 15444
+    },
+    {
+      "year": 2016,
+      "article_type": "Jewellery",
+      "reviews": 35933
+    },
+    {
+      "year": 2016,
+      "article_type": "Other",
+      "reviews": 10523
+    },
+    {
+      "year": 2016,
+      "article_type": "Pants & Leggings",
+      "reviews": 4319
+    },
+    {
+      "year": 2016,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 8122
+    },
+    {
+      "year": 2016,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 8543
+    },
+    {
+      "year": 2016,
+      "article_type": "Watches",
+      "reviews": 6542
+    },
+    {
+      "year": 2017,
+      "article_type": "Bags & Wallets",
+      "reviews": 9293
+    },
+    {
+      "year": 2017,
+      "article_type": "Dresses",
+      "reviews": 28655
+    },
+    {
+      "year": 2017,
+      "article_type": "Jewellery",
+      "reviews": 27341
+    },
+    {
+      "year": 2017,
+      "article_type": "Other",
+      "reviews": 10913
+    },
+    {
+      "year": 2017,
+      "article_type": "Pants & Leggings",
+      "reviews": 5869
+    },
+    {
+      "year": 2017,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 9388
+    },
+    {
+      "year": 2017,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 11343
+    },
+    {
+      "year": 2017,
+      "article_type": "Watches",
+      "reviews": 6779
+    },
+    {
+      "year": 2018,
+      "article_type": "Bags & Wallets",
+      "reviews": 7593
+    },
+    {
+      "year": 2018,
+      "article_type": "Dresses",
+      "reviews": 22436
+    },
+    {
+      "year": 2018,
+      "article_type": "Jewellery",
+      "reviews": 23559
+    },
+    {
+      "year": 2018,
+      "article_type": "Other",
+      "reviews": 9645
+    },
+    {
+      "year": 2018,
+      "article_type": "Pants & Leggings",
+      "reviews": 3932
+    },
+    {
+      "year": 2018,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 9011
+    },
+    {
+      "year": 2018,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 7972
+    },
+    {
+      "year": 2018,
+      "article_type": "Watches",
+      "reviews": 5889
+    },
+    {
+      "year": 2019,
+      "article_type": "Bags & Wallets",
+      "reviews": 6690
+    },
+    {
+      "year": 2019,
+      "article_type": "Dresses",
+      "reviews": 16945
+    },
+    {
+      "year": 2019,
+      "article_type": "Jewellery",
+      "reviews": 19782
+    },
+    {
+      "year": 2019,
+      "article_type": "Other",
+      "reviews": 10152
+    },
+    {
+      "year": 2019,
+      "article_type": "Pants & Leggings",
+      "reviews": 4580
+    },
+    {
+      "year": 2019,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 6761
+    },
+    {
+      "year": 2019,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 7389
+    },
+    {
+      "year": 2019,
+      "article_type": "Watches",
+      "reviews": 5247
+    },
+    {
+      "year": 2020,
+      "article_type": "Bags & Wallets",
+      "reviews": 3266
+    },
+    {
+      "year": 2020,
+      "article_type": "Dresses",
+      "reviews": 6913
+    },
+    {
+      "year": 2020,
+      "article_type": "Jewellery",
+      "reviews": 11996
+    },
+    {
+      "year": 2020,
+      "article_type": "Other",
+      "reviews": 10302
+    },
+    {
+      "year": 2020,
+      "article_type": "Pants & Leggings",
+      "reviews": 4759
+    },
+    {
+      "year": 2020,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 4555
+    },
+    {
+      "year": 2020,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 6094
+    },
+    {
+      "year": 2020,
+      "article_type": "Watches",
+      "reviews": 3447
+    },
+    {
+      "year": 2021,
+      "article_type": "Bags & Wallets",
+      "reviews": 2119
+    },
+    {
+      "year": 2021,
+      "article_type": "Dresses",
+      "reviews": 5108
+    },
+    {
+      "year": 2021,
+      "article_type": "Jewellery",
+      "reviews": 8361
+    },
+    {
+      "year": 2021,
+      "article_type": "Other",
+      "reviews": 9655
+    },
+    {
+      "year": 2021,
+      "article_type": "Pants & Leggings",
+      "reviews": 6042
+    },
+    {
+      "year": 2021,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 3750
+    },
+    {
+      "year": 2021,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 6342
+    },
+    {
+      "year": 2021,
+      "article_type": "Watches",
+      "reviews": 3586
+    },
+    {
+      "year": 2022,
+      "article_type": "Bags & Wallets",
+      "reviews": 1497
+    },
+    {
+      "year": 2022,
+      "article_type": "Dresses",
+      "reviews": 3678
+    },
+    {
+      "year": 2022,
+      "article_type": "Jewellery",
+      "reviews": 5378
+    },
+    {
+      "year": 2022,
+      "article_type": "Other",
+      "reviews": 5058
+    },
+    {
+      "year": 2022,
+      "article_type": "Pants & Leggings",
+      "reviews": 3523
+    },
+    {
+      "year": 2022,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 3797
+    },
+    {
+      "year": 2022,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 4629
+    },
+    {
+      "year": 2022,
+      "article_type": "Watches",
+      "reviews": 2444
+    },
+    {
+      "year": 2023,
+      "article_type": "Bags & Wallets",
+      "reviews": 498
+    },
+    {
+      "year": 2023,
+      "article_type": "Dresses",
+      "reviews": 882
+    },
+    {
+      "year": 2023,
+      "article_type": "Jewellery",
+      "reviews": 2091
+    },
+    {
+      "year": 2023,
+      "article_type": "Other",
+      "reviews": 1439
+    },
+    {
+      "year": 2023,
+      "article_type": "Pants & Leggings",
+      "reviews": 1123
+    },
+    {
+      "year": 2023,
+      "article_type": "Sunglasses & Eyewear",
+      "reviews": 1394
+    },
+    {
+      "year": 2023,
+      "article_type": "Tops & T-Shirts",
+      "reviews": 1381
+    },
+    {
+      "year": 2023,
+      "article_type": "Watches",
+      "reviews": 787
+    }
+  ],
+  "sentiment_by_year_category": [
+    {
+      "year": 2014,
+      "category_group": "Accessories",
+      "compound": 0.5696
+    },
+    {
+      "year": 2014,
+      "category_group": "Clothing",
+      "compound": 0.6209
+    },
+    {
+      "year": 2014,
+      "category_group": "Footwear",
+      "compound": 0.571
+    },
+    {
+      "year": 2014,
+      "category_group": "Other",
+      "compound": 0.5902
+    },
+    {
+      "year": 2015,
+      "category_group": "Accessories",
+      "compound": 0.5434
+    },
+    {
+      "year": 2015,
+      "category_group": "Clothing",
+      "compound": 0.5885
+    },
+    {
+      "year": 2015,
+      "category_group": "Footwear",
+      "compound": 0.53
+    },
+    {
+      "year": 2015,
+      "category_group": "Other",
+      "compound": 0.5507
+    },
+    {
+      "year": 2016,
+      "category_group": "Accessories",
+      "compound": 0.5593
+    },
+    {
+      "year": 2016,
+      "category_group": "Clothing",
+      "compound": 0.5796
+    },
+    {
+      "year": 2016,
+      "category_group": "Footwear",
+      "compound": 0.562
+    },
+    {
+      "year": 2016,
+      "category_group": "Other",
+      "compound": 0.5686
+    },
+    {
+      "year": 2017,
+      "category_group": "Accessories",
+      "compound": 0.5462
+    },
+    {
+      "year": 2017,
+      "category_group": "Clothing",
+      "compound": 0.5615
+    },
+    {
+      "year": 2017,
+      "category_group": "Footwear",
+      "compound": 0.5393
+    },
+    {
+      "year": 2017,
+      "category_group": "Other",
+      "compound": 0.5516
+    },
+    {
+      "year": 2018,
+      "category_group": "Accessories",
+      "compound": 0.5477
+    },
+    {
+      "year": 2018,
+      "category_group": "Clothing",
+      "compound": 0.5767
+    },
+    {
+      "year": 2018,
+      "category_group": "Footwear",
+      "compound": 0.5548
+    },
+    {
+      "year": 2018,
+      "category_group": "Other",
+      "compound": 0.5744
+    },
+    {
+      "year": 2019,
+      "category_group": "Accessories",
+      "compound": 0.5891
+    },
+    {
+      "year": 2019,
+      "category_group": "Clothing",
+      "compound": 0.6102
+    },
+    {
+      "year": 2019,
+      "category_group": "Footwear",
+      "compound": 0.5669
+    },
+    {
+      "year": 2019,
+      "category_group": "Other",
+      "compound": 0.6043
+    },
+    {
+      "year": 2020,
+      "category_group": "Accessories",
+      "compound": 0.586
+    },
+    {
+      "year": 2020,
+      "category_group": "Clothing",
+      "compound": 0.6196
+    },
+    {
+      "year": 2020,
+      "category_group": "Footwear",
+      "compound": 0.5812
+    },
+    {
+      "year": 2020,
+      "category_group": "Other",
+      "compound": 0.566
+    },
+    {
+      "year": 2021,
+      "category_group": "Accessories",
+      "compound": 0.5571
+    },
+    {
+      "year": 2021,
+      "category_group": "Clothing",
+      "compound": 0.5913
+    },
+    {
+      "year": 2021,
+      "category_group": "Footwear",
+      "compound": 0.5365
+    },
+    {
+      "year": 2021,
+      "category_group": "Other",
+      "compound": 0.5232
+    },
+    {
+      "year": 2022,
+      "category_group": "Accessories",
+      "compound": 0.5586
+    },
+    {
+      "year": 2022,
+      "category_group": "Clothing",
+      "compound": 0.5986
+    },
+    {
+      "year": 2022,
+      "category_group": "Footwear",
+      "compound": 0.5382
+    },
+    {
+      "year": 2022,
+      "category_group": "Other",
+      "compound": 0.5337
+    },
+    {
+      "year": 2023,
+      "category_group": "Accessories",
+      "compound": 0.6082
+    },
+    {
+      "year": 2023,
+      "category_group": "Clothing",
+      "compound": 0.5868
+    },
+    {
+      "year": 2023,
+      "category_group": "Footwear",
+      "compound": 0.5072
+    },
+    {
+      "year": 2023,
+      "category_group": "Other",
+      "compound": 0.5281
+    }
+  ],
+  "emerging_categories": [
+    {
+      "article_type": "Jackets & Coats",
+      "growth_pct": 78.4
+    },
+    {
+      "article_type": "Hoodies & Sweaters",
+      "growth_pct": 75.4
+    },
+    {
+      "article_type": "Sandals",
+      "growth_pct": 55.2
+    },
+    {
+      "article_type": "Socks",
+      "growth_pct": 37.1
+    },
+    {
+      "article_type": "Sunglasses & Eyewear",
+      "growth_pct": 36.0
+    },
+    {
+      "article_type": "Shorts & Skirts",
+      "growth_pct": 19.8
+    },
+    {
+      "article_type": "Tops & T-Shirts",
+      "growth_pct": 19.6
+    },
+    {
+      "article_type": "Pants & Leggings",
+      "growth_pct": 19.2
+    },
+    {
+      "article_type": "Scarves & Gloves",
+      "growth_pct": 14.2
+    },
+    {
+      "article_type": "Watches",
+      "growth_pct": 3.8
+    }
+  ],
+  "declining_categories": [
+    {
+      "article_type": "Other",
+      "growth_pct": -14.9
+    },
+    {
+      "article_type": "Hats & Caps",
+      "growth_pct": -19.1
+    },
+    {
+      "article_type": "Jewellery",
+      "growth_pct": -26.6
+    },
+    {
+      "article_type": "Bags & Wallets",
+      "growth_pct": -34.8
+    },
+    {
+      "article_type": "Dresses",
+      "growth_pct": -37.9
+    }
+  ],
+  "emerging_terms": [
+    {
+      "term": "leather gloves",
+      "lift": 7.6,
+      "recent_rate": 1.37
+    },
+    {
+      "term": "gloves soft",
+      "lift": 7.35,
+      "recent_rate": 1.22
+    },
+    {
+      "term": "gloves perfect",
+      "lift": 6.2,
+      "recent_rate": 0.83
+    },
+    {
+      "term": "wear scrubs",
+      "lift": 6.2,
+      "recent_rate": 0.83
+    },
+    {
+      "term": "fingers long",
+      "lift": 5.96,
+      "recent_rate": 0.8
+    },
+    {
+      "term": "comfortable shoe",
+      "lift": 5.61,
+      "recent_rate": 0.75
+    },
+    {
+      "term": "use phone",
+      "lift": 5.46,
+      "recent_rate": 1.64
+    },
+    {
+      "term": "taylor swift",
+      "lift": 5.37,
+      "recent_rate": 0.72
+    },
+    {
+      "term": "turned finger",
+      "lift": 5.07,
+      "recent_rate": 0.81
+    },
+    {
+      "term": "gloves ve",
+      "lift": 4.88,
+      "recent_rate": 0.68
+    },
+    {
+      "term": "925 sterling",
+      "lift": 4.86,
+      "recent_rate": 0.91
+    },
+    {
+      "term": "clip ons",
+      "lift": 4.85,
+      "recent_rate": 1.0
+    },
+    {
+      "term": "nice gloves",
+      "lift": 4.73,
+      "recent_rate": 2.02
+    },
+    {
+      "term": "comfortable gloves",
+      "lift": 4.65,
+      "recent_rate": 0.62
+    },
+    {
+      "term": "shoe comfortable",
+      "lift": 4.53,
+      "recent_rate": 0.6
+    },
+    {
+      "term": "label maker",
+      "lift": 4.41,
+      "recent_rate": 0.59
+    },
+    {
+      "term": "north face",
+      "lift": 4.41,
+      "recent_rate": 0.59
+    },
+    {
+      "term": "quality gloves",
+      "lift": 4.32,
+      "recent_rate": 0.6
+    },
+    {
+      "term": "gloves fit",
+      "lift": 4.26,
+      "recent_rate": 2.24
+    },
+    {
+      "term": "glow dark",
+      "lift": 4.25,
+      "recent_rate": 0.65
+    },
+    {
+      "term": "cotton socks",
+      "lift": 4.23,
+      "recent_rate": 0.62
+    },
+    {
+      "term": "finger green",
+      "lift": 4.19,
+      "recent_rate": 1.62
+    },
+    {
+      "term": "touch screen",
+      "lift": 4.09,
+      "recent_rate": 4.09
+    },
+    {
+      "term": "gloves gloves",
+      "lift": 4.06,
+      "recent_rate": 1.54
+    },
+    {
+      "term": "patio umbrella",
+      "lift": 4.06,
+      "recent_rate": 0.54
+    }
+  ],
+  "window": {
+    "recent_years": [
+      2022,
+      2023
+    ],
+    "baseline_years": [
+      2019,
+      2021
+    ]
+  },
+  "note": "Trends are computed from timestamped product-review activity (engagement proxy), not from social-media posts."
+}

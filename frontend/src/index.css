@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-paper: #f7f4ee;
+  --color-card: #fffdf9;
+  --color-ink: #1a1612;
+  --color-mute: #6f675d;
+  --color-line: #e5ddd0;
+  --color-accent: #b4532a;
+  --color-accent-soft: #f3e1d6;
+  --color-sage: #4b6b57;
+  --color-sage-soft: #dfe9e1;
+  --color-gold: #b08a2e;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+::selection { background: var(--color-accent-soft); }
+
+.card-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(26,22,18,.35); }
+.fade-in { animation: fade .5s ease both; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.shimmer { background: linear-gradient(90deg, #ece5d8 25%, #f5f0e6 50%, #ece5d8 75%); background-size: 200% 100%; animation: sh 1.3s infinite; }
+@keyframes sh { to { background-position: -200% 0; } }
+.pill { @apply inline-flex items-center gap-1 rounded-full border border-line bg-card px-3 py-1 text-xs font-medium text-mute transition-colors; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition hover:bg-accent active:scale-[.98] disabled:opacity-50; }
+.btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-card px-5 py-2.5 text-sm font-medium text-ink transition hover:border-ink active:scale-[.98]; }
+.input { @apply w-full rounded-full border border-line bg-card px-4 py-2.5 text-sm outline-none transition focus:border-ink; }

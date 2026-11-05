@@ -1,0 +1,27 @@
+{
+  "raw_products": 826108,
+  "products_with_title_and_image": 825730,
+  "duplicate_listings_merged": 55420,
+  "raw_reviews": 2500939,
+  "reviews_on_valid_products": 2499496,
+  "duplicate_user_item_removed": 27141,
+  "kcore": {
+    "min_user": 2,
+    "min_item": 3,
+    "rounds": 19
+  },
+  "catalogue_after_core": 26809,
+  "interactions_after_core": 170676,
+  "users_after_core": 70813,
+  "priced_products": 3235,
+  "missing_price_pct": 87.93,
+  "missing_colour_pct": 37.96,
+  "other_category_pct": 6.48,
+  "reviews_with_text": 838147,
+  "time_range": [
+    "2006-09-11 23:25:18+05:30",
+    "2023-08-14 23:40:50.122000+05:30"
+  ],
+  "sparsity_pct": 99.991,
+  "elapsed_sec": 50.5
+}

@@ -1,0 +1,970 @@
+{
+  "label": "synthetic_demo_posts.csv",
+  "is_synthetic": true,
+  "banner": "SYNTHETIC DEMONSTRATION DATA - generated for UI/pipeline demo; not real social-media findings.",
+  "n_posts": 3936,
+  "date_range": [
+    "2024-01-01",
+    "2025-06-28"
+  ],
+  "sentiment_distribution": {
+    "positive": 1975,
+    "negative": 1006,
+    "neutral": 955
+  },
+  "top_hashtags": [
+    {
+      "hashtag": "#vintagejeans",
+      "posts": 534,
+      "likes": 15818,
+      "avg_sentiment": 0.296
+    },
+    {
+      "hashtag": "#denim",
+      "posts": 526,
+      "likes": 14407,
+      "avg_sentiment": 0.272
+    },
+    {
+      "hashtag": "#y2kfashion",
+      "posts": 518,
+      "likes": 15621,
+      "avg_sentiment": 0.262
+    },
+    {
+      "hashtag": "#sneakerhead",
+      "posts": 514,
+      "likes": 13904,
+      "avg_sentiment": 0.28
+    },
+    {
+      "hashtag": "#streetwear",
+      "posts": 511,
+      "likes": 14054,
+      "avg_sentiment": 0.299
+    },
+    {
+      "hashtag": "#ootd",
+      "posts": 501,
+      "likes": 12764,
+      "avg_sentiment": 0.284
+    },
+    {
+      "hashtag": "#sheinhaul",
+      "posts": 464,
+      "likes": 10619,
+      "avg_sentiment": 0.093
+    },
+    {
+      "hashtag": "#haul",
+      "posts": 449,
+      "likes": 10968,
+      "avg_sentiment": 0.084
+    },
+    {
+      "hashtag": "#fastfashion",
+      "posts": 441,
+      "likes": 9747,
+      "avg_sentiment": 0.114
+    },
+    {
+      "hashtag": "#thrifted",
+      "posts": 414,
+      "likes": 12210,
+      "avg_sentiment": 0.3
+    },
+    {
+      "hashtag": "#summerstyle",
+      "posts": 410,
+      "likes": 11344,
+      "avg_sentiment": 0.318
+    },
+    {
+      "hashtag": "#secondhandfirst",
+      "posts": 405,
+      "likes": 11658,
+      "avg_sentiment": 0.312
+    },
+    {
+      "hashtag": "#slowfashion",
+      "posts": 405,
+      "likes": 11634,
+      "avg_sentiment": 0.309
+    },
+    {
+      "hashtag": "#capsulewardrobe",
+      "posts": 386,
+      "likes": 11145,
+      "avg_sentiment": 0.311
+    },
+    {
+      "hashtag": "#linen",
+      "posts": 380,
+      "likes": 11149,
+      "avg_sentiment": 0.324
+    }
+  ],
+  "hashtag_trend": [
+    {
+      "month": "2024-01",
+      "hashtag": "#denim",
+      "posts": 26
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#haul",
+      "posts": 45
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#ootd",
+      "posts": 34
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#sheinhaul",
+      "posts": 40
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#sneakerhead",
+      "posts": 36
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#streetwear",
+      "posts": 26
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#vintagejeans",
+      "posts": 27
+    },
+    {
+      "month": "2024-01",
+      "hashtag": "#y2kfashion",
+      "posts": 27
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#denim",
+      "posts": 28
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#haul",
+      "posts": 39
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#ootd",
+      "posts": 33
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#sheinhaul",
+      "posts": 35
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#sneakerhead",
+      "posts": 39
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#streetwear",
+      "posts": 32
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#vintagejeans",
+      "posts": 29
+    },
+    {
+      "month": "2024-02",
+      "hashtag": "#y2kfashion",
+      "posts": 29
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#denim",
+      "posts": 21
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#haul",
+      "posts": 36
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#ootd",
+      "posts": 30
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#sheinhaul",
+      "posts": 32
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#sneakerhead",
+      "posts": 21
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#streetwear",
+      "posts": 27
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#vintagejeans",
+      "posts": 22
+    },
+    {
+      "month": "2024-03",
+      "hashtag": "#y2kfashion",
+      "posts": 21
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#denim",
+      "posts": 30
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#haul",
+      "posts": 31
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#ootd",
+      "posts": 29
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#sheinhaul",
+      "posts": 33
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#sneakerhead",
+      "posts": 39
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#streetwear",
+      "posts": 30
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#vintagejeans",
+      "posts": 26
+    },
+    {
+      "month": "2024-04",
+      "hashtag": "#y2kfashion",
+      "posts": 26
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#denim",
+      "posts": 26
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#haul",
+      "posts": 32
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#ootd",
+      "posts": 29
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#sheinhaul",
+      "posts": 34
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#sneakerhead",
+      "posts": 26
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#streetwear",
+      "posts": 31
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#vintagejeans",
+      "posts": 31
+    },
+    {
+      "month": "2024-05",
+      "hashtag": "#y2kfashion",
+      "posts": 29
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#denim",
+      "posts": 26
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#haul",
+      "posts": 30
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#ootd",
+      "posts": 26
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#sheinhaul",
+      "posts": 27
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#sneakerhead",
+      "posts": 29
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#streetwear",
+      "posts": 31
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#vintagejeans",
+      "posts": 23
+    },
+    {
+      "month": "2024-06",
+      "hashtag": "#y2kfashion",
+      "posts": 27
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#denim",
+      "posts": 34
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#haul",
+      "posts": 27
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#ootd",
+      "posts": 27
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#sheinhaul",
+      "posts": 31
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#sneakerhead",
+      "posts": 36
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#streetwear",
+      "posts": 25
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#vintagejeans",
+      "posts": 27
+    },
+    {
+      "month": "2024-07",
+      "hashtag": "#y2kfashion",
+      "posts": 23
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#denim",
+      "posts": 22
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#haul",
+      "posts": 21
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#ootd",
+      "posts": 30
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#sheinhaul",
+      "posts": 26
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#sneakerhead",
+      "posts": 30
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#streetwear",
+      "posts": 26
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#vintagejeans",
+      "posts": 38
+    },
+    {
+      "month": "2024-08",
+      "hashtag": "#y2kfashion",
+      "posts": 36
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#denim",
+      "posts": 26
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#haul",
+      "posts": 31
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#ootd",
+      "posts": 30
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#sheinhaul",
+      "posts": 27
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#sneakerhead",
+      "posts": 26
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#streetwear",
+      "posts": 30
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#vintagejeans",
+      "posts": 28
+    },
+    {
+      "month": "2024-09",
+      "hashtag": "#y2kfashion",
+      "posts": 30
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#denim",
+      "posts": 24
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#haul",
+      "posts": 13
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#ootd",
+      "posts": 28
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#sheinhaul",
+      "posts": 22
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#sneakerhead",
+      "posts": 30
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#streetwear",
+      "posts": 32
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#vintagejeans",
+      "posts": 28
+    },
+    {
+      "month": "2024-10",
+      "hashtag": "#y2kfashion",
+      "posts": 28
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#denim",
+      "posts": 29
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#haul",
+      "posts": 19
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#ootd",
+      "posts": 28
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#sheinhaul",
+      "posts": 25
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#sneakerhead",
+      "posts": 30
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#streetwear",
+      "posts": 26
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#vintagejeans",
+      "posts": 33
+    },
+    {
+      "month": "2024-11",
+      "hashtag": "#y2kfashion",
+      "posts": 28
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#denim",
+      "posts": 33
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#haul",
+      "posts": 19
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#ootd",
+      "posts": 28
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#sheinhaul",
+      "posts": 23
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#sneakerhead",
+      "posts": 32
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#streetwear",
+      "posts": 34
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#vintagejeans",
+      "posts": 28
+    },
+    {
+      "month": "2024-12",
+      "hashtag": "#y2kfashion",
+      "posts": 29
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#denim",
+      "posts": 26
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#haul",
+      "posts": 23
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#ootd",
+      "posts": 27
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#sheinhaul",
+      "posts": 23
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#sneakerhead",
+      "posts": 25
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#streetwear",
+      "posts": 30
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#vintagejeans",
+      "posts": 26
+    },
+    {
+      "month": "2025-01",
+      "hashtag": "#y2kfashion",
+      "posts": 26
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#denim",
+      "posts": 31
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#haul",
+      "posts": 22
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#ootd",
+      "posts": 26
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#sheinhaul",
+      "posts": 20
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#sneakerhead",
+      "posts": 23
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#streetwear",
+      "posts": 25
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#vintagejeans",
+      "posts": 31
+    },
+    {
+      "month": "2025-02",
+      "hashtag": "#y2kfashion",
+      "posts": 26
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#denim",
+      "posts": 45
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#haul",
+      "posts": 18
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#ootd",
+      "posts": 27
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#sheinhaul",
+      "posts": 21
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#sneakerhead",
+      "posts": 22
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#streetwear",
+      "posts": 29
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#vintagejeans",
+      "posts": 33
+    },
+    {
+      "month": "2025-03",
+      "hashtag": "#y2kfashion",
+      "posts": 26
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#denim",
+      "posts": 34
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#haul",
+      "posts": 12
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#ootd",
+      "posts": 28
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#sheinhaul",
+      "posts": 13
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#sneakerhead",
+      "posts": 26
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#streetwear",
+      "posts": 26
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#vintagejeans",
+      "posts": 31
+    },
+    {
+      "month": "2025-04",
+      "hashtag": "#y2kfashion",
+      "posts": 35
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#denim",
+      "posts": 35
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#haul",
+      "posts": 13
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#ootd",
+      "posts": 23
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#sheinhaul",
+      "posts": 20
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#sneakerhead",
+      "posts": 24
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#streetwear",
+      "posts": 31
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#vintagejeans",
+      "posts": 37
+    },
+    {
+      "month": "2025-05",
+      "hashtag": "#y2kfashion",
+      "posts": 38
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#denim",
+      "posts": 30
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#haul",
+      "posts": 18
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#ootd",
+      "posts": 18
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#sheinhaul",
+      "posts": 12
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#sneakerhead",
+      "posts": 20
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#streetwear",
+      "posts": 20
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#vintagejeans",
+      "posts": 36
+    },
+    {
+      "month": "2025-06",
+      "hashtag": "#y2kfashion",
+      "posts": 34
+    }
+  ],
+  "rising_hashtags": [
+    {
+      "hashtag": "#capsulewardrobe",
+      "growth_ratio": 1.45
+    },
+    {
+      "hashtag": "#summerstyle",
+      "growth_ratio": 1.44
+    },
+    {
+      "hashtag": "#linen",
+      "growth_ratio": 1.42
+    },
+    {
+      "hashtag": "#thrifted",
+      "growth_ratio": 1.37
+    },
+    {
+      "hashtag": "#secondhandfirst",
+      "growth_ratio": 1.36
+    },
+    {
+      "hashtag": "#denim",
+      "growth_ratio": 1.25
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2024-01",
+      "posts": 220,
+      "avg_sentiment": 0.189,
+      "likes": 5491
+    },
+    {
+      "month": "2024-02",
+      "posts": 221,
+      "avg_sentiment": 0.212,
+      "likes": 5618
+    },
+    {
+      "month": "2024-03",
+      "posts": 215,
+      "avg_sentiment": 0.281,
+      "likes": 6399
+    },
+    {
+      "month": "2024-04",
+      "posts": 218,
+      "avg_sentiment": 0.264,
+      "likes": 5781
+    },
+    {
+      "month": "2024-05",
+      "posts": 220,
+      "avg_sentiment": 0.265,
+      "likes": 5992
+    },
+    {
+      "month": "2024-06",
+      "posts": 220,
+      "avg_sentiment": 0.265,
+      "likes": 5461
+    },
+    {
+      "month": "2024-07",
+      "posts": 219,
+      "avg_sentiment": 0.223,
+      "likes": 5335
+    },
+    {
+      "month": "2024-08",
+      "posts": 221,
+      "avg_sentiment": 0.258,
+      "likes": 7004
+    },
+    {
+      "month": "2024-09",
+      "posts": 218,
+      "avg_sentiment": 0.276,
+      "likes": 7240
+    },
+    {
+      "month": "2024-10",
+      "posts": 217,
+      "avg_sentiment": 0.315,
+      "likes": 6093
+    },
+    {
+      "month": "2024-11",
+      "posts": 217,
+      "avg_sentiment": 0.199,
+      "likes": 5466
+    },
+    {
+      "month": "2024-12",
+      "posts": 215,
+      "avg_sentiment": 0.299,
+      "likes": 5548
+    },
+    {
+      "month": "2025-01",
+      "posts": 218,
+      "avg_sentiment": 0.269,
+      "likes": 5286
+    },
+    {
+      "month": "2025-02",
+      "posts": 220,
+      "avg_sentiment": 0.251,
+      "likes": 5575
+    },
+    {
+      "month": "2025-03",
+      "posts": 221,
+      "avg_sentiment": 0.266,
+      "likes": 6078
+    },
+    {
+      "month": "2025-04",
+      "posts": 217,
+      "avg_sentiment": 0.23,
+      "likes": 5956
+    },
+    {
+      "month": "2025-05",
+      "posts": 219,
+      "avg_sentiment": 0.254,
+      "likes": 5576
+    },
+    {
+      "month": "2025-06",
+      "posts": 220,
+      "avg_sentiment": 0.29,
+      "likes": 5764
+    }
+  ],
+  "engagement_vs_sentiment": {
+    "negative": 22.5,
+    "neutral": 23.4,
+    "positive": 30.73
+  }
+}

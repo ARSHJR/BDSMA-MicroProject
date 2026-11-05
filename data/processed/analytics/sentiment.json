@@ -1,0 +1,128 @@
+{
+  "method": "VADER (rule/lexicon-based) on review text",
+  "n_reviews_scored": 838147,
+  "distribution": {
+    "positive": 684915,
+    "negative": 91877,
+    "neutral": 61355
+  },
+  "spearman_vs_star_rating": 0.5216,
+  "agreement_with_star_rating_pos_vs_neg": 0.9134,
+  "agreement_note": "Agreement computed only on non-3-star reviews where VADER is non-neutral; stars are a noisy proxy label.",
+  "by_rating": {
+    "1.0": -0.141,
+    "2.0": 0.0984,
+    "3.0": 0.3522,
+    "4.0": 0.6558,
+    "5.0": 0.7649
+  },
+  "by_year": [
+    {
+      "year": 2003,
+      "n": 1,
+      "mean": 0.9701
+    },
+    {
+      "year": 2005,
+      "n": 8,
+      "mean": 0.8848
+    },
+    {
+      "year": 2006,
+      "n": 17,
+      "mean": 0.7683
+    },
+    {
+      "year": 2007,
+      "n": 77,
+      "mean": 0.8317
+    },
+    {
+      "year": 2008,
+      "n": 215,
+      "mean": 0.8111
+    },
+    {
+      "year": 2009,
+      "n": 218,
+      "mean": 0.7544
+    },
+    {
+      "year": 2010,
+      "n": 283,
+      "mean": 0.7323
+    },
+    {
+      "year": 2011,
+      "n": 740,
+      "mean": 0.7264
+    },
+    {
+      "year": 2012,
+      "n": 2821,
+      "mean": 0.7085
+    },
+    {
+      "year": 2013,
+      "n": 11176,
+      "mean": 0.6654
+    },
+    {
+      "year": 2014,
+      "n": 31234,
+      "mean": 0.5804
+    },
+    {
+      "year": 2015,
+      "n": 66398,
+      "mean": 0.5528
+    },
+    {
+      "year": 2016,
+      "n": 137258,
+      "mean": 0.5676
+    },
+    {
+      "year": 2017,
+      "n": 153668,
+      "mean": 0.5537
+    },
+    {
+      "year": 2018,
+      "n": 123013,
+      "mean": 0.5628
+    },
+    {
+      "year": 2019,
+      "n": 106838,
+      "mean": 0.5986
+    },
+    {
+      "year": 2020,
+      "n": 75618,
+      "mean": 0.596
+    },
+    {
+      "year": 2021,
+      "n": 65681,
+      "mean": 0.566
+    },
+    {
+      "year": 2022,
+      "n": 47284,
+      "mean": 0.5732
+    },
+    {
+      "year": 2023,
+      "n": 15599,
+      "mean": 0.5853
+    }
+  ],
+  "signal_rates": {
+    "dur_neg": 0.0648,
+    "dur_pos": 0.1005,
+    "fit_neg": 0.0753,
+    "versatile": 0.0178
+  },
+  "data_source": "Amazon Reviews 2023 (Fashion) - product reviews, NOT social-media posts"
+}

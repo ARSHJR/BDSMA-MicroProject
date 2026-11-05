@@ -1,0 +1,147 @@
+{
+  "disclaimer": "HEURISTIC PROXY. Not a measured environmental impact, carbon footprint, or certification. Built only from ratings and review-text signals; shrunk toward the catalogue mean for low-evidence items.",
+  "weights": {
+    "quality_rating": 0.3,
+    "durability_mentions": 0.3,
+    "fit_reliability(fewer returns)": 0.25,
+    "versatility": 0.15
+  },
+  "shrinkage_prior_strength": 8.0,
+  "score_distribution": {
+    "0.05": 35.4,
+    "0.25": 48.3,
+    "0.5": 56.6,
+    "0.75": 64.7,
+    "0.95": 75.8
+  },
+  "by_article_type": [
+    {
+      "article_type": "Belts & Ties",
+      "avg_score": 63.29,
+      "n": 425
+    },
+    {
+      "article_type": "Bags & Wallets",
+      "avg_score": 63.02,
+      "n": 1123
+    },
+    {
+      "article_type": "Hats & Caps",
+      "avg_score": 62.05,
+      "n": 743
+    },
+    {
+      "article_type": "Socks",
+      "avg_score": 62.03,
+      "n": 679
+    },
+    {
+      "article_type": "Hair Accessories",
+      "avg_score": 61.8,
+      "n": 124
+    },
+    {
+      "article_type": "Scarves & Gloves",
+      "avg_score": 61.03,
+      "n": 664
+    },
+    {
+      "article_type": "Other",
+      "avg_score": 60.8,
+      "n": 1737
+    },
+    {
+      "article_type": "Shoes",
+      "avg_score": 60.19,
+      "n": 146
+    },
+    {
+      "article_type": "Sunglasses & Eyewear",
+      "avg_score": 59.19,
+      "n": 1266
+    },
+    {
+      "article_type": "Pajamas & Loungewear",
+      "avg_score": 58.65,
+      "n": 112
+    },
+    {
+      "article_type": "Watches",
+      "avg_score": 57.86,
+      "n": 761
+    },
+    {
+      "article_type": "Boots",
+      "avg_score": 57.82,
+      "n": 273
+    },
+    {
+      "article_type": "Hoodies & Sweaters",
+      "avg_score": 56.81,
+      "n": 570
+    },
+    {
+      "article_type": "Sneakers",
+      "avg_score": 56.13,
+      "n": 113
+    },
+    {
+      "article_type": "Sandals",
+      "avg_score": 55.97,
+      "n": 359
+    },
+    {
+      "article_type": "Jewellery",
+      "avg_score": 55.95,
+      "n": 6263
+    },
+    {
+      "article_type": "Shorts & Skirts",
+      "avg_score": 55.04,
+      "n": 938
+    },
+    {
+      "article_type": "Heels & Flats",
+      "avg_score": 54.41,
+      "n": 86
+    },
+    {
+      "article_type": "Pants & Leggings",
+      "avg_score": 54.38,
+      "n": 1038
+    },
+    {
+      "article_type": "Tops & T-Shirts",
+      "avg_score": 54.05,
+      "n": 1873
+    },
+    {
+      "article_type": "Dresses",
+      "avg_score": 53.08,
+      "n": 5091
+    },
+    {
+      "article_type": "Jackets & Coats",
+      "avg_score": 52.95,
+      "n": 768
+    },
+    {
+      "article_type": "Underwear & Intimates",
+      "avg_score": 52.91,
+      "n": 717
+    },
+    {
+      "article_type": "Jeans",
+      "avg_score": 49.54,
+      "n": 308
+    },
+    {
+      "article_type": "Swimwear",
+      "avg_score": 48.18,
+      "n": 632
+    }
+  ],
+  "natural_fibre_items": 4171,
+  "items_with_material_text": 6809,
+  "corr_score_vs_rating": 0.757
+}

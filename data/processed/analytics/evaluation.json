@@ -1,0 +1,184 @@
+{
+  "protocol": "Global chronological split (train < 80th pct time <= val < 90th pct <= test). Weights tuned on val; reported on test. Relevant = test interactions with rating >= 4; history items excluded from recommendations.",
+  "k": 10,
+  "split_times": {
+    "val_start": "2019-09-30 11:33:56.408000+00:00",
+    "test_start": "2020-12-31 14:48:44.278000+00:00"
+  },
+  "validation_info": {
+    "n_eval_users": 5620,
+    "n_train_interactions": 136540,
+    "n_test_positive_interactions": 8075,
+    "test_item_unseen_in_train_pct": 54.0,
+    "cf_build_seconds": 27.18,
+    "best_weights": [
+      0.2,
+      0.2,
+      0.3
+    ],
+    "hybrid_minus_popularity_ndcg_ci95": [
+      0.0014212802090941793,
+      0.004152659118360266
+    ]
+  },
+  "tuning_grid_val_ndcg": {
+    "(0.2, 0.2, 0.1)": 0.00716,
+    "(0.2, 0.2, 0.3)": 0.01319,
+    "(0.2, 0.2, 0.6)": 0.01159,
+    "(0.2, 0.2, 1.0)": 0.01095,
+    "(0.2, 0.2, 1.5)": 0.01078,
+    "(0.2, 0.5, 0.1)": 0.00683,
+    "(0.2, 0.5, 0.3)": 0.00969,
+    "(0.2, 0.5, 0.6)": 0.0124,
+    "(0.2, 0.5, 1.0)": 0.01167,
+    "(0.2, 0.5, 1.5)": 0.01118,
+    "(0.2, 1.0, 0.1)": 0.00645,
+    "(0.2, 1.0, 0.3)": 0.00877,
+    "(0.2, 1.0, 0.6)": 0.00935,
+    "(0.2, 1.0, 1.0)": 0.0106,
+    "(0.2, 1.0, 1.5)": 0.01212,
+    "(0.5, 0.2, 0.1)": 0.00724,
+    "(0.5, 0.2, 0.3)": 0.00696,
+    "(0.5, 0.2, 0.6)": 0.01039,
+    "(0.5, 0.2, 1.0)": 0.01148,
+    "(0.5, 0.2, 1.5)": 0.01099,
+    "(0.5, 0.5, 0.1)": 0.00762,
+    "(0.5, 0.5, 0.3)": 0.00722,
+    "(0.5, 0.5, 0.6)": 0.01044,
+    "(0.5, 0.5, 1.0)": 0.01258,
+    "(0.5, 0.5, 1.5)": 0.01159,
+    "(0.5, 1.0, 0.1)": 0.00708,
+    "(0.5, 1.0, 0.3)": 0.00697,
+    "(0.5, 1.0, 0.6)": 0.00875,
+    "(0.5, 1.0, 1.0)": 0.01048,
+    "(0.5, 1.0, 1.5)": 0.01285
+  },
+  "test_info": {
+    "n_eval_users": 5926,
+    "n_train_interactions": 153608,
+    "n_test_positive_interactions": 7558,
+    "test_item_unseen_in_train_pct": 49.5,
+    "cf_build_seconds": 25.01,
+    "hybrid_minus_popularity_ndcg_ci95": [
+      -0.0011409869326140752,
+      0.0014983209292952996
+    ]
+  },
+  "best_weights": {
+    "content": 0.2,
+    "cf": 0.2,
+    "pop": 0.3
+  },
+  "models": {
+    "Random": {
+      "precision@k": 3.3749578130273375e-05,
+      "recall@k": 0.0002531218359770503,
+      "ndcg@k": 0.00015426547222906507,
+      "coverage": 0.1393188854489164,
+      "diversity_ild": 0.8481746315956116,
+      "ms_per_user_batch": 0.38
+    },
+    "Popularity (baseline)": {
+      "precision@k": 0.002919338508268647,
+      "recall@k": 0.028335583305208682,
+      "ndcg@k": 0.0181462975156433,
+      "coverage": 0.00044761087694430974,
+      "diversity_ild": 0.819050133228302,
+      "ms_per_user_batch": 0.195
+    },
+    "Content-based (TF-IDF cosine)": {
+      "precision@k": 0.0010124873439082012,
+      "recall@k": 0.009018369413239476,
+      "ndcg@k": 0.005053082491195732,
+      "coverage": 0.6789883994181058,
+      "diversity_ild": 0.39550232887268066,
+      "ms_per_user_batch": 0.236
+    },
+    "Item-kNN collaborative": {
+      "precision@k": 0.001889976375295309,
+      "recall@k": 0.017886864326283832,
+      "ndcg@k": 0.008439050749527017,
+      "coverage": 0.5403782311910179,
+      "diversity_ild": 0.8239642977714539,
+      "ms_per_user_batch": 0.316
+    },
+    "SVD matrix factorisation (64)": {
+      "precision@k": 0.00011812352345595681,
+      "recall@k": 0.0010968612892338846,
+      "ndcg@k": 0.0005178591568636018,
+      "coverage": 0.6227013316423589,
+      "diversity_ild": 0.8360564708709717,
+      "ms_per_user_batch": 0.29
+    },
+    "Hybrid (content + CF + popularity)": {
+      "precision@k": 0.00320620992237597,
+      "recall@k": 0.03097930025874676,
+      "ndcg@k": 0.01826715660718413,
+      "coverage": 0.2545413853556641,
+      "diversity_ild": 0.8177298307418823,
+      "ms_per_user_batch": 0.485
+    }
+  },
+  "sustainability_tradeoff": [
+    {
+      "lambda": 0.0,
+      "ndcg@k": 0.01826715660718413,
+      "recall@k": 0.03097930025874676,
+      "diversity_ild": 0.8177298307418823,
+      "coverage": 0.2545413853556641,
+      "avg_sustainability_score": 61.540361120486,
+      "avg_item_rating": 4.3405294971312856
+    },
+    {
+      "lambda": 0.2,
+      "ndcg@k": 0.018142582263251175,
+      "recall@k": 0.03199178760265496,
+      "diversity_ild": 0.8229361772537231,
+      "coverage": 0.24215748442687157,
+      "avg_sustainability_score": 63.29919001012488,
+      "avg_item_rating": 4.3823770502868715
+    },
+    {
+      "lambda": 0.4,
+      "ndcg@k": 0.01838010453111092,
+      "recall@k": 0.03193553830577118,
+      "diversity_ild": 0.8113011121749878,
+      "coverage": 0.21190644932671865,
+      "avg_sustainability_score": 65.66104286196423,
+      "avg_item_rating": 4.418681387107661
+    },
+    {
+      "lambda": 0.6,
+      "ndcg@k": 0.016763035234827427,
+      "recall@k": 0.027519968500393743,
+      "diversity_ild": 0.7779913544654846,
+      "coverage": 0.17598567645193777,
+      "avg_sustainability_score": 70.66237597030039,
+      "avg_item_rating": 4.469184340195748
+    },
+    {
+      "lambda": 0.8,
+      "ndcg@k": 0.005461587294277294,
+      "recall@k": 0.008498331270859114,
+      "diversity_ild": 0.8540558815002441,
+      "coverage": 0.03293670036181879,
+      "avg_sustainability_score": 87.87832939588255,
+      "avg_item_rating": 4.614431707728653
+    }
+  ],
+  "online_latency_ms": {
+    "mean": 14.259579498902895,
+    "p50": 13.705700024729595,
+    "p95": 17.37386001041159,
+    "note": "Full production pipeline incl. sustainability blend, MMR and explanations, single user"
+  },
+  "build_seconds": {
+    "content_topk": 25.7,
+    "cf_topk_train": 25.01
+  },
+  "caveats": [
+    "Interactions are Amazon review events (explicit ratings turned into implicit feedback) - extremely sparse (>99.99%).",
+    "Sustainability scores use review text from the whole period (including the test window); the sustainability trade-off table is descriptive, not a clean held-out result.",
+    "Absolute precision/recall are low by nature of sparse fashion data; compare models relatively."
+  ]
+}
