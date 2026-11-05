@@ -151,13 +151,13 @@ class Recommender:
             reasons.append({"type": "preference", "text": "Matches your preferences: " + " · ".join(bits)})
         # sustainability explanation (always grounded in real fields)
         notes = []
-        if row.dur_pos and row.dur_pos > 0: notes.append(f"{int(row.dur_pos)} review(s) mention durability / quality")
-        if row.dur_neg == 0 and row.n_text_reviews >= 5: notes.append("no durability complaints in reviews")
-        if row.fit_neg == 0 and row.n_text_reviews >= 5: notes.append("no fit/return complaints")
-        if row.neutral_colour: notes.append("neutral colour pairs with more outfits")
-        if row.natural_fibre: notes.append("lists natural-fibre material")
+        if row.dur_pos and row.dur_pos > 0: notes.append(f"{int(row.dur_pos)} customer(s) praise its durability or quality")
+        if row.dur_neg == 0 and row.n_text_reviews >= 5: notes.append("no durability complaints")
+        if row.fit_neg == 0 and row.n_text_reviews >= 5: notes.append("no fit or return complaints")
+        if row.neutral_colour: notes.append("neutral colour that goes with more outfits")
+        if row.natural_fibre: notes.append("made with natural fibres")
         if notes and (sustain > 0 or row.sustainability_score >= 70):
-            reasons.append({"type": "sustainability", "text": f"Longevity proxy {row.sustainability_score:.0f}/100: " + "; ".join(notes[:3])})
+            reasons.append({"type": "sustainability", "text": f"Built to last ({row.sustainability_score:.0f}/100): " + "; ".join(notes[:3])})
         if not reasons:
             reasons.append({"type": "popular", "text": f"Popular pick: rated {row.avg_rating:.1f}★ by {int(row.n_ratings)} shoppers"})
         return reasons

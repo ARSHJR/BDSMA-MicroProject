@@ -8,7 +8,7 @@ import { ProductCard } from '../components/ProductCard'
 import { Empty, ErrorBox, Loading, PageHead } from '../components/ui'
 
 interface Listing { total: number; page: number; page_size: number; items: Card[] }
-const SORTS = [['popular', 'Most reviewed'], ['rating', 'Top rated'], ['sustainability', 'Longevity score'], ['price_asc', 'Price: low → high'], ['price_desc', 'Price: high → low'], ['newest', 'Newest']]
+const SORTS = [['popular', 'Most reviewed'], ['rating', 'Top rated'], ['sustainability', 'Built to last'], ['price_asc', 'Price: low → high'], ['price_desc', 'Price: high → low'], ['newest', 'Newest']]
 
 export default function Shop() {
   const [sp, setSp] = useSearchParams()
@@ -47,7 +47,7 @@ export default function Shop() {
         <Select k="brand" label="Brand" opts={f?.brand} />
         <label className="block text-xs font-medium uppercase tracking-wider text-mute">Max price ($)
           <input className="input mt-1 !rounded-xl" type="number" min={0} placeholder="any" value={get('max_price')} onChange={e => set('max_price', e.target.value)} /></label>
-        <label className="block text-xs font-medium uppercase tracking-wider text-mute">Min longevity score: {get('min_sustainability') || 0}
+        <label className="block text-xs font-medium uppercase tracking-wider text-mute">Min. durability rating: {get('min_sustainability') || 0}
           <input type="range" min={0} max={90} step={5} className="mt-2 w-full accent-[#4b6b57]" value={get('min_sustainability') || 0} onChange={e => set('min_sustainability', e.target.value === '0' ? '' : e.target.value)} /></label>
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={get('priced_only') === '1'} onChange={e => set('priced_only', e.target.checked ? '1' : '')} />Only items with a listed price</label>
         {f && <p className="text-xs text-mute">Only {f.priced_products.toLocaleString()} of {f.total_products.toLocaleString()} products have a price in the source data.</p>}

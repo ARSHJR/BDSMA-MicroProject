@@ -1,7 +1,8 @@
-import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { api } from '../api'
 import { useFetch } from '../hooks'
 import { ChartCard, ErrorBox, PageHead, PALETTE, Spinner, Stat } from '../components/ui'
+import { SocialLab } from './Trends'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const axis = { fontSize: 11, fill: '#6f675d' }
@@ -11,15 +12,19 @@ export default function Insights() {
   const dash = useFetch(() => api<any>('/api/dashboard'), [])
   const ev = useFetch(() => api<any>('/api/evaluation'), [])
   const ds = useFetch(() => api<any>('/api/datasets'), [])
+  const sus = useFetch(() => api<any>('/api/sustainability'), [])
+  const sentv = useFetch(() => api<any>('/api/sentiment'), [])
   if (dash.error || ev.error || ds.error) return <ErrorBox message={dash.error || ev.error || ds.error || ''} onRetry={() => { dash.reload(); ev.reload(); ds.reload() }} />
-  if (!dash.data || !ev.data || !ds.data) return <Spinner />
+  if (!dash.data || !ev.data || !ds.data || !sus.data || !sentv.data) return <Spinner />
+  const su = sus.data, sv = sentv.data
+  const tr = su.tradeoff.map((t: any) => ({ lambda: `${Math.round(t.lambda * 100)}%`, 'Avg longevity score': +t.avg_sustainability_score.toFixed(1), 'NDCG@10 (x1000)': +(t.ndcg_at_k ?? t['ndcg@k']) * 1000 }))
   const d = dash.data, e = ev.data, q = ds.data.quality_report
   const models = Object.entries(e.models).map(([name, m]: any) => ({ name, ...m }))
   const best = Math.max(...models.map((m: any) => m['ndcg@k']))
   const sent = Object.entries(d.sentiment).map(([name, value]) => ({ name, value }))
   const cmp = models.filter((m: any) => m.name !== 'Random').map((m: any) => ({ name: m.name.split(' (')[0], 'NDCG@10': +m['ndcg@k'].toFixed(4), 'Recall@10': +m['recall@k'].toFixed(4), 'Coverage': +m.coverage.toFixed(3) }))
   return <div className="space-y-14">
-    <PageHead eyebrow="Transparency" title="Model & dataset insights" sub="Every number on this page is computed by the pipeline from the processed data — nothing is hard-coded." />
+    <PageHead eyebrow="About our data" title="Model & dataset insights" sub="Every number on this page is computed by the pipeline from the processed data — nothing is hard-coded." />
 
     <section><h2 className="mb-4 text-3xl">Dataset</h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4"><Stat label="Raw products" value={d.dataset.raw_products} /><Stat label="Raw reviews" value={d.dataset.raw_reviews} />
@@ -55,6 +60,20 @@ export default function Insights() {
         <div className="h-72"><ResponsiveContainer><BarChart data={cmp}><CartesianGrid stroke="#e5ddd0" vertical={false} /><XAxis dataKey="name" tick={axis} /><YAxis tick={axis} /><Tooltip /><Legend /><Bar dataKey="NDCG@10" fill="#1a1612" radius={[4, 4, 0, 0]} /><Bar dataKey="Recall@10" fill="#b4532a" radius={[4, 4, 0, 0]} /><Bar dataKey="Coverage" fill="#4b6b57" radius={[4, 4, 0, 0]} /></BarChart></ResponsiveContainer></div></ChartCard></div>
       <ul className="mt-4 list-disc space-y-1 pl-5 text-xs text-mute">{e.caveats.map((c: string) => <li key={c}>{c}</li>)}</ul>
     </section>
+    <section><h2 className="mb-4 text-3xl">Durability rating method (SDG 12)</h2>
+      <p className="mb-4 max-w-3xl text-sm text-mute">{su.disclaimer} No verified material, certification or carbon data exists in the source, so none is shown.</p>
+      <div className="grid gap-4 md:grid-cols-4">{Object.entries(su.weights).map(([k, v]) => <Stat key={k} label={k.replace(/_/g, ' ')} value={`${Math.round((v as number) * 100)}%`} hint="weight" />)}</div>
+      <p className="mt-3 text-sm text-mute">Each rate is shrunk toward the catalogue mean (empirical Bayes, K={su.shrinkage_prior_strength}) so items with few reviews are not over-trusted. Corr(score, rating) = {su.corr_score_vs_rating}. {su.natural_fibre_items.toLocaleString()} items name a natural-fibre material (label only, not scored).</p>
+      <div className="mt-4"><ChartCard title="Ranking trade-off as the slider weight increases" sub="Held-out test lists (top-10): durability gained vs. accuracy lost"><div className="h-72"><ResponsiveContainer><LineChart data={tr}><CartesianGrid stroke="#e5ddd0" vertical={false} /><XAxis dataKey="lambda" tick={axis} /><YAxis yAxisId="a" tick={axis} /><YAxis yAxisId="b" orientation="right" tick={axis} /><Tooltip /><Legend />
+        <Line yAxisId="a" dataKey="Avg longevity score" stroke="#4b6b57" strokeWidth={2.5} /><Line yAxisId="b" dataKey="NDCG@10 (x1000)" stroke="#b4532a" strokeWidth={2.5} /></LineChart></ResponsiveContainer></div></ChartCard></div></section>
+
+    <section><h2 className="mb-4 text-3xl">Sentiment validity</h2>
+      <div className="grid gap-4 md:grid-cols-4"><Stat label="Reviews scored (VADER)" value={sv.n_reviews_scored} /><Stat label="Spearman rho vs stars" value={sv.spearman_vs_star_rating.toFixed(2)} />
+        <Stat label="Pos/neg agreement with stars" value={`${(100 * sv.agreement_with_star_rating_pos_vs_neg).toFixed(0)}%`} hint="non-neutral, not 3 stars" /><Stat label="Positive reviews" value={`${Math.round(100 * sv.distribution.positive / sv.n_reviews_scored)}%`} /></div></section>
+
+    <section><h2 className="mb-2 text-3xl">Social-post analysis</h2>
+      <p className="mb-4 max-w-3xl text-sm text-mute">Upload a CSV of posts you are licensed to use, or view the built-in demo, which is synthetic and labelled as such.</p><SocialLab /></section>
+
     <section className="rounded-3xl border border-line bg-card p-7"><h2 className="text-2xl">How the hybrid works</h2>
       <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-mute">
         <li><b className="text-ink">Content</b>: TF-IDF (1–2-grams) on title/features/description + weighted one-hots (type, gender, colour) → cosine; top-40 neighbours per item.</li>

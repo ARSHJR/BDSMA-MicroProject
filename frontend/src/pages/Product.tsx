@@ -47,18 +47,18 @@ export default function Product() {
           <p className="mt-1 text-sm">Before buying, check: {p.already_saved_similar.map((a, i) => <span key={a.pid}>{i > 0 && ', '}<Link className="underline" to={`/product/${a.pid}`}>{a.title.slice(0, 48)}…</Link> ({Math.round((a.similarity ?? 0) * 100)}% similar)</span>)}</p></div>}
 
         <section className="mt-8 rounded-2xl border border-line bg-card p-5">
-          <h3 className="flex items-center gap-2 text-lg">Longevity proxy <span className="font-sans text-sm text-mute">{p.sustainability_score.toFixed(0)}/100</span></h3>
-          <p className="mb-3 flex gap-1.5 text-xs text-mute"><Info size={13} className="mt-0.5 shrink-0" />Heuristic from ratings and review text ({p.n_text_reviews} reviews). Not a measured environmental impact. Evidence: {(p.sus_confidence * 100).toFixed(0)}%.</p>
+          <h3 className="flex items-center gap-2 text-lg">Built to last <span className="font-sans text-sm text-mute">{p.sustainability_score.toFixed(0)}/100</span></h3>
+          <p className="mb-3 flex gap-1.5 text-xs text-mute"><Info size={13} className="mt-0.5 shrink-0" />Based on ratings and what customers say in {p.n_text_reviews} reviews.</p>
           {Object.entries(p.sustainability_breakdown).map(([k, v]) => <div key={k} className="mb-2"><div className="flex justify-between text-xs"><span>{LABELS[k] ?? k}</span><span>{Math.round(v * 100)}%</span></div>
             <div className="h-1.5 rounded bg-line"><div className="h-1.5 rounded bg-sage transition-all" style={{ width: `${v * 100}%` }} /></div></div>)}
-          <p className="mt-3 text-xs text-mute">Reviews mentioning durability: {p.signals.durability_praise_reviews} positive · {p.signals.durability_complaint_reviews} complaints · {p.signals.fit_or_return_complaint_reviews} fit/return issues</p>
+          <p className="mt-3 text-xs text-mute">Reviews on durability: {p.signals.durability_praise_reviews} positive · {p.signals.durability_complaint_reviews} complaints · {p.signals.fit_or_return_complaint_reviews} fit or return issues</p>
         </section>
         {(p.features || p.description) && <section className="mt-6"><h3 className="text-lg">Details</h3><p className="mt-1 text-sm leading-relaxed text-mute">{p.features || p.description}</p></section>}
       </div>
     </div>
 
     <section className="grid gap-8 md:grid-cols-2">
-      <div><h3 className="text-2xl">What reviewers say</h3><p className="mb-3 text-xs text-mute">{p.reviews.source} · VADER sentiment</p>
+      <div><h3 className="text-2xl">What reviewers say</h3><p className="mb-3 text-xs text-mute">Customer reviews</p>
         {sent.length === 0 ? <p className="text-sm text-mute">No text reviews for this item.</p> :
           <div className="flex items-center gap-6"><div className="h-36 w-36"><ResponsiveContainer><PieChart><Pie data={sent} dataKey="value" innerRadius={34} outerRadius={60} paddingAngle={2}>{sent.map(s => <Cell key={s.name} fill={SENT_COL[s.name]} />)}</Pie><Tooltip /></PieChart></ResponsiveContainer></div>
             <ul className="text-sm">{sent.map(s => <li key={s.name}><span className="mr-2 inline-block h-2 w-2 rounded-full" style={{ background: SENT_COL[s.name] }} />{s.name}: {s.value}</li>)}</ul></div>}
@@ -66,9 +66,9 @@ export default function Product() {
       <div className="space-y-3">{p.reviews.top_reviews.map((rv, i) => <blockquote key={i} className="rounded-2xl border border-line bg-card p-4 text-sm"><p className="text-gold">{'★'.repeat(Math.round(rv.rating))}</p><p className="mt-1 text-mute">“{rv.text}”</p></blockquote>)}</div>
     </section>
 
-    {p.longevity_alternatives.length > 0 && <section><h2 className="text-3xl">Longer-lasting alternatives</h2><p className="mb-5 text-sm text-mute">Similar pieces with a higher longevity proxy — consider these before buying.</p>
-      <div className="grid grid-cols-2 gap-5 md:grid-cols-4">{p.longevity_alternatives.map(a => <div key={a.pid}><ProductCard p={a} /><p className="mt-1 text-center text-xs text-sage">+{a.sustainability_gain?.toFixed(0)} longevity points</p></div>)}</div></section>}
-    <section><h2 className="text-3xl">Related pieces</h2><p className="mb-5 text-sm text-mute">Content + collaborative similarity (TF-IDF cosine blended with co-rating neighbours).</p>
+    {p.longevity_alternatives.length > 0 && <section><h2 className="text-3xl">Longer-lasting alternatives</h2><p className="mb-5 text-sm text-mute">Similar pieces that customers say last longer.</p>
+      <div className="grid grid-cols-2 gap-5 md:grid-cols-4">{p.longevity_alternatives.map(a => <div key={a.pid}><ProductCard p={a} /><p className="mt-1 text-center text-xs text-sage">Lasts longer</p></div>)}</div></section>}
+    <section><h2 className="text-3xl">Related pieces</h2><p className="mb-5 text-sm text-mute">Similar styles, and pieces other shoppers liked too.</p>
       <div className="grid grid-cols-2 gap-5 md:grid-cols-4">{p.related.slice(0, 8).map(a => <ProductCard key={a.pid} p={a} />)}</div></section>
   </div>
 }

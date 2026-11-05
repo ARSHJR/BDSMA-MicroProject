@@ -33,11 +33,11 @@ export function ErrorBox({ message, onRetry }: { message: string; onRetry?: () =
     {onRetry && <button className="btn-ghost !py-1.5" onClick={onRetry}>Retry</button>}</div>
 }
 
-export function SusBadge({ score, conf, compact }: { score: number; conf?: number; compact?: boolean }) {
+export function SusBadge({ score, compact }: { score: number; conf?: number; compact?: boolean }) {
   const tone = score >= 65 ? 'bg-sage-soft text-sage' : score >= 50 ? 'bg-[#efe9d3] text-gold' : 'bg-[#eee6e0] text-mute'
   return <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${tone}`}
-    title={`Longevity proxy ${score.toFixed(0)}/100 (heuristic from ratings & review text; evidence ${(100 * (conf ?? 1)).toFixed(0)}%)`}>
-    <Leaf size={11} />{compact ? score.toFixed(0) : `Longevity ${score.toFixed(0)}`}</span>
+    title={`Durability rating ${score.toFixed(0)}/100, estimated from customer reviews`}>
+    <Leaf size={11} />{compact ? score.toFixed(0) : `Built to last ${score.toFixed(0)}`}</span>
 }
 
 export function PageHead({ eyebrow, title, sub, right }: { eyebrow?: string; title: string; sub?: string; right?: ReactNode }) {

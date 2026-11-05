@@ -4,7 +4,7 @@ import { Check } from 'lucide-react'
 import { api } from '../api'
 import { useFetch } from '../hooks'
 import { useUser } from '../UserContext'
-import type { Card, Facets, Prefs } from '../types'
+import type { Card, Prefs } from '../types'
 import { ProductCard } from '../components/ProductCard'
 import { Empty, ErrorBox, PageHead } from '../components/ui'
 
@@ -23,12 +23,11 @@ export default function Me() {
   const [form, setForm] = useState<Prefs>({ types: [], genders: [], colours: [], max_price: null, sustain: 0.3 })
   const [saved, setSaved] = useState(false)
   const [err, setErr] = useState('')
-  const facets = useFetch(() => api<Facets>('/api/facets'), [])
   useEffect(() => { if (prefs) setForm(prefs) }, [prefs])
   const wl = useFetch(() => api<{ items: Card[] }>('/api/wishlist'), [wishlist.length, version])
   const submit = async () => { try { setErr(''); await savePrefs(form); setSaved(true); setTimeout(() => setSaved(false), 2500) } catch (e) { setErr((e as Error).message) } }
   return <div className="space-y-14">
-    <PageHead eyebrow="My style" title="Your preferences" sub="A 30-second onboarding that solves the cold-start problem. Preferences are stored against an anonymous guest session (no account needed)." />
+    <PageHead eyebrow="My style" title="Your preferences" sub="Tell us what you like and we'll tailor your picks. No account needed." />
     <section className="space-y-7 rounded-3xl border border-line bg-card p-7">
       <Chips label="What do you like to wear?" options={TYPES} value={form.types} onChange={types => setForm({ ...form, types })} />
       <Chips label="Shopping for" options={GENDERS} value={form.genders} onChange={genders => setForm({ ...form, genders })} />
@@ -36,8 +35,8 @@ export default function Me() {
       <div className="grid gap-6 md:grid-cols-2">
         <label className="block text-sm font-medium">Budget ceiling (optional, $)
           <input className="input mt-2" type="number" min={1} placeholder="no limit" value={form.max_price ?? ''} onChange={e => setForm({ ...form, max_price: e.target.value ? Number(e.target.value) : null })} />
-          <span className="mt-1 block text-xs font-normal text-mute">Only {facets.data?.priced_products.toLocaleString() ?? '…'} products carry a price; others are never excluded by budget, just not boosted.</span></label>
-        <label className="block text-sm font-medium">How much should longevity matter? <span className="font-display text-lg">{Math.round(form.sustain * 100)}%</span>
+          <span className="mt-1 block text-xs font-normal text-mute">Products without a listed price are still shown.</span></label>
+        <label className="block text-sm font-medium">How much should durability matter? <span className="font-display text-lg">{Math.round(form.sustain * 100)}%</span>
           <input type="range" aria-label="Sustainability preference" min={0} max={1} step={0.05} className="mt-3 w-full accent-[#4b6b57]" value={form.sustain} onChange={e => setForm({ ...form, sustain: Number(e.target.value) })} /></label>
       </div>
       {err && <ErrorBox message={err} />}
@@ -46,7 +45,7 @@ export default function Me() {
     </section>
     <section>
       <h2 className="text-3xl">Wishlist <span className="text-lg text-mute">({wishlist.length})</span></h2>
-      <p className="mb-5 text-sm text-mute">Saved items count as strong positive signals — and the product page will tell you when a new item resembles something you already saved.</p>
+      <p className="mb-5 text-sm text-mute">Saved items shape your picks, and we'll let you know when something is similar to an item you've saved.</p>
       {wl.error ? <ErrorBox message={wl.error} onRetry={wl.reload} /> : !wl.data || wl.data.items.length === 0 ?
         <Empty title="Your wishlist is empty" hint="Tap the heart on any product to save it." action={<Link to="/shop" className="btn">Browse catalogue</Link>} /> :
         <div className="grid grid-cols-2 gap-5 md:grid-cols-4">{wl.data.items.map(p => <ProductCard key={p.pid} p={p} />)}</div>}

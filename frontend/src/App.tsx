@@ -12,7 +12,7 @@ import Me from './pages/Me'
 import Insights from './pages/Insights'
 
 const LINKS = [
-  ['/shop', 'Shop'], ['/for-you', 'For you'], ['/trends', 'Trends'], ['/sustainability', 'Sustainability'], ['/insights', 'Model & data'],
+  ['/shop', 'Shop'], ['/for-you', 'For you'], ['/trends', 'Trends'], ['/sustainability', 'Sustainability'],
 ] as const
 
 function Nav() {
@@ -49,7 +49,7 @@ export default function App() {
       </Routes>
     </main>
     <footer className="border-t border-line py-8 text-center text-xs text-mute">
-      Thread — academic project for Big Data &amp; Social Media Analytics · SDG 12 · Data: Amazon Reviews 2023 (McAuley Lab)
+      © Thread · Fashion made to last · <Link to="/insights" className="underline-offset-2 hover:underline">About our data</Link>
     </footer>
   </UserProvider></BrowserRouter>
 }

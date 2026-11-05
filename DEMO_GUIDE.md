@@ -11,12 +11,12 @@ Open http://localhost:5173 (first load of the API takes ~15 s while models load)
 | Time | Do | Expected / say |
 |---|---|---|
 | 0:00 | **Home** | Real Amazon Fashion products. “No signals yet — showing popularity”: this is the **cold-start fallback** (Bayesian popularity). |
-| 0:45 | **My style** → pick *Watches*, *Men*, set longevity slider → Save → **For you** | Badge “Preference-based”; list is all watches; each card carries a reason (“Matches your preferences…”, longevity facts). Preferences solve cold start. |
-| 1:45 | On a card tap 👍 on 2–3 sneakers/boots (use **Shop**, filter *Boots*) then go to **For you** | Badge becomes **Personalised hybrid**; list shifts toward boots; reasons now say *“Similar style to … you showed interest in”* or *“Shoppers who liked … also liked this”*. Click **Show score breakdown** to see content / CF / preference / popularity parts. 👎 an item: similar items sink. |
-| 3:00 | Drag the **sustainability slider** 0 → 80% | List re-ranks live; the longevity badges rise; open Sustainability page for the trade-off curve (up to λ≈0.4 longevity improves at no accuracy cost). |
-| 3:45 | Open a **product page** | Longevity breakdown with evidence %, reviewer sentiment donut (VADER), “Longer-lasting alternatives”, and — after saving a similar item to the wishlist — the **“You may already have something like this”** own-before-buy notice. |
-| 4:45 | **Trends** | Review activity per category over time, emerging categories, rising phrases, sentiment validity (ρ = 0.52 with star ratings, 91 % pos/neg agreement). Second tab: social-post analyser — banner clearly says SYNTHETIC; upload `data/social/synthetic_demo_posts.csv` to show the CSV import. |
-| 5:45 | **Model & data** | Dataset counts, data-quality report, dashboard charts, evaluation table (hybrid vs baselines) and the honest caveats, benchmark (pandas vs DuckDB 9.9×). |
+| 0:45 | **My style** → pick *Watches*, *Men*, set longevity slider → Save → **For you** | Badge “Based on your style”; list is all watches; each card carries a reason (“Matches your preferences…”, longevity facts). Preferences solve cold start. |
+| 1:45 | On a card tap 👍 on 2–3 sneakers/boots (use **Shop**, filter *Boots*) then go to **For you** | Badge becomes **Made for you**; list shifts toward boots; reasons now say *“Similar style to … you showed interest in”* or *“Shoppers who liked … also liked this”*. 👎 an item: similar items sink. |
+| 3:00 | Drag the **"Prioritise pieces built to last"** slider 0 → 80% on For you | List re-ranks live; the durability badges rise. |
+| 3:45 | Open a **product page** | "Built to last" rating with breakdown, customer-review donut, “Longer-lasting alternatives”, and — after saving a similar item to the wishlist — the **“You may already have something like this”** notice. |
+| 4:45 | **Trends** and **Sustainability** pages | Customer-review trends (categories over time, emerging categories, rising phrases); the customer-facing sustainability page. |
+| 5:45 | Footer link **About our data** | Dataset counts, quality report, dashboard, evaluation table and caveats, benchmark (pandas vs DuckDB 9.9×), durability method + slider trade-off (no accuracy loss up to λ≈0.4), sentiment validity (ρ = 0.52, 91 % agreement), and the social-post analyser: banner says SYNTHETIC; upload `data/social/synthetic_demo_posts.csv` to show the CSV import. |
 
 ## ML explained (for the viva)
 * **Content-based**: TF-IDF (unigrams+bigrams, sublinear tf) of title/features/description, concatenated with weighted one-hot type/gender/colour/group, L2-normalised; item–item cosine; top-40 neighbours kept (sparse). A user profile is the weighted sum of neighbour rows of the items they interacted with.
@@ -40,3 +40,5 @@ Open http://localhost:5173 (first load of the API takes ~15 s while models load)
 * Blank page / “Is the API running” box → start the API (port 8000) first.
 * Port busy → `Get-NetTCPConnection -LocalPort 8000` and stop the process.
 * Some product images may not load (hot-linked); a placeholder is shown.
+
+* Your preferences, likes and wishlist persist across backend restarts (SQLite `data/app.db` + browser localStorage). Delete `data/app.db` and use a fresh Incognito window for a clean cold start.

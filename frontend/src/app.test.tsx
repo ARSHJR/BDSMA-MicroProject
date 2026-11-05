@@ -61,8 +61,8 @@ describe('ProductCard', () => {
 describe('ForYou page', () => {
   it('shows cold-start mode, an explanation, and refetches when the sustainability slider moves', async () => {
     render(<MemoryRouter><UserProvider><ForYou /></UserProvider></MemoryRouter>)
-    expect(await screen.findByText('Cold start')).toBeInTheDocument()
-    expect(await screen.findByText(/Popular pick/)).toBeInTheDocument()
+    expect(await screen.findByText('Popular picks')).toBeInTheDocument()
+    expect((await screen.findAllByText(/Popular pick/)).length).toBeGreaterThan(0)
     const before = calls.filter(c => c.url.startsWith('/api/recommendations')).length
     const slider = screen.getByLabelText('Sustainability weight') as HTMLInputElement
     const { fireEvent } = await import('@testing-library/react')
